@@ -28,6 +28,7 @@ app.set('view engine', 'ejs');
 
 
 app.get('/post', (req, res) => {
+    let variavel = "teste"
     res.render('edit-news', {post: {title: "", content: "", summary: ""}, valido: true});
 });
 
