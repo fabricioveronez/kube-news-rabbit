@@ -72,9 +72,6 @@ app.get('/post/:id', async (req, res) => {
 
 
 app.get('/', async (req, res) => {
-
-    const variavel = "teste"
-
     const posts = await models.Post.findAll();
     res.render('index',{posts: posts});
 });
