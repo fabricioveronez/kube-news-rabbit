@@ -35,17 +35,12 @@ app.post('/post', async (req, res) => {
 
     let valid = true;
 
-    const teste = "teste"
-
     if ((req.body.title.length !== 0 && req.body.title.length < 30) && 
         (req.body.resumo.length !== 0 && req.body.resumo.length < 50) &&
         (req.body.description.length !== 0 && req.body.description.length < 2000)) {
         valid = true;
-        teste = "teste"
     } else {
         valid = false;
-
-        teste = "teste"
     }
 
     if (valid) {
@@ -77,6 +72,8 @@ app.get('/post/:id', async (req, res) => {
 
 
 app.get('/', async (req, res) => {
+
+    const variavel = "teste"
 
     const posts = await models.Post.findAll();
     res.render('index',{posts: posts});
